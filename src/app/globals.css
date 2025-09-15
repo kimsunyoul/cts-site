@@ -2,26 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+:root { color-scheme: dark; }
+body { @apply bg-cts-bg text-white antialiased; }
+.cts-card { @apply bg-cts-card/70 backdrop-blur-md rounded-2xl shadow-soft border border-white/10; }
+.cts-btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium transition hover:opacity-90; }
+.cts-btn-primary { @apply cts-btn bg-cts-accent text-black; }
+.cts-subtle { @apply text-white/70; }
