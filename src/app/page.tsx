@@ -22,25 +22,19 @@ export default function Page() {
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="flex flex-col items-center gap-6">
-          {/* 로고 영역 */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-cts-accent rounded-lg" />
             <span className="font-semibold tracking-wide text-lg">
               CTS — CatastroTech Solutions™
             </span>
           </div>
-
-          {/* 메인 슬로건 */}
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Securing Emotions, <br />
-            Shaping Futures.
+            Securing Emotions, <br /> Shaping Futures.
           </h1>
           <p className="text-white/70 max-w-2xl">
-            위기 속에서도 감정은 안전해야 합니다.  
-            CTS는 감정 리셋·감시·보호·기부·미래 설계를 통합 제공하는
-            글로벌 감정 솔루션 기업입니다.
+            위기 속에서도 감정은 안전해야 합니다. CTS는 감정 리셋·감시·보호·기부·미래 설계를
+            통합 제공하는 글로벌 감정 솔루션 기업입니다.
           </p>
-
           <a
             href="#tech"
             className="bg-cts-accent text-black font-medium px-6 py-3 rounded-xl shadow-soft hover:opacity-90"
@@ -52,9 +46,7 @@ export default function Page() {
 
       {/* 5대 핵심 기술 */}
       <section id="tech" className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center">
-          CTS Core Technologies™
-        </h2>
+        <h2 className="text-2xl font-semibold mb-8 text-center">CTS Core Technologies™</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TechCard
             title="VSI (Visual Shock Integration™)"
@@ -84,7 +76,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-white/10 mt-16">
         <div className="max-w-6xl mx-auto px-6 py-8 text-sm text-white/60 text-center">
           © {new Date().getFullYear()} CatastroTech Solutions™ — Engineering Safe Emotions for a Safer World.
