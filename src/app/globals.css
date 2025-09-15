@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 다크 바탕만 깔고, 커스텀 유틸은 제거 */
 :root { color-scheme: dark; }
-body { @apply bg-cts-bg text-white antialiased; }
-.cts-card { @apply bg-cts-card/70 backdrop-blur-md rounded-2xl shadow-soft border border-white/10; }
-.cts-btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium transition hover:opacity-90; }
-.cts-btn-primary { @apply cts-btn bg-cts-accent text-black; }
-.cts-subtle { @apply text-white/70; }
+body { @apply bg-[#0b1220] text-white antialiased; }
+
+/* 필요 시 재사용 컴포넌트 유틸 (존재하는 유틸만 사용) */
+@layer components {
+  .cts-card { @apply bg-white/5 backdrop-blur-md rounded-2xl border border-white/10; }
+  .cts-btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium transition hover:opacity-90; }
+  .cts-btn-primary { @apply bg-[#57a6ff] text-black; }
+}
