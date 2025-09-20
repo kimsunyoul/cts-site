@@ -16,6 +16,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Page({ params, searchParams }: Props) {
-  const token = searchParams?.t ?? "dev"; // 일단 dev 토큰
+  const token = searchParams?.t ?? "dev";
   return <SCCLanding coinId={params.coinId} token={token} />;
 }
