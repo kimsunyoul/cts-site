@@ -73,7 +73,7 @@ export default function SCCLanding({ coinId, token }: { coinId: string; token: s
         <header className="mb-6">
           <div className="text-xs uppercase tracking-widest opacity-75">CatastroTech Solutions · SCC</div>
           <h1 className="text-2xl mt-1 font-semibold">Convert the crisis into stability.</h1>
-          <p className="text-sm opacity-80">Today's rate is linked to disaster, affect, and participation data.</p>
+          <p className="text-sm opacity-80">Today&apos;s rate is linked to disaster, affect, and participation data.</p>
         </header>
 
         {/* 환율 카드 */}
