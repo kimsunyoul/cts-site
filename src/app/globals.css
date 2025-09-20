@@ -18,7 +18,7 @@ body { @apply bg-cts-bg text-white antialiased; }
   .cts-btn-primary {
     @apply cts-btn bg-cts-accent text-black;
   }
-  .cts-subtle {
-    @apply text-white/70;
+  .cts-btn-ghost {
+    @apply cts-btn border border-white/30 bg-transparent text-white hover:bg-white/10;
   }
 }
