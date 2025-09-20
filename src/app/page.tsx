@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function TechCard({
   title,
   tagline,
@@ -19,6 +21,20 @@ function TechCard({
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#0b1220] text-white">
+      {/* 헤더 */}
+      <header className="sticky top-0 z-50 bg-[#0b1220]/70 backdrop-blur border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="size-8 rounded-lg bg-[#57a6ff]" />
+            <span className="font-semibold tracking-wide">CTS — CatastroTech Solutions™</span>
+          </div>
+          <nav className="flex items-center gap-4 text-sm opacity-90">
+            <a href="#tech" className="hover:opacity-100 opacity-80">Technologies</a>
+            <Link href="/scc" className="hover:opacity-100 opacity-80">SCC</Link>
+          </nav>
+        </div>
+      </header>
+
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-3">
