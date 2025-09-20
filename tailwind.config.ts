@@ -7,6 +7,7 @@ export default {
       colors: {
         cts: {
           bg: "#0b1220",
+          card: "#0f1830",
           accent: "#57a6ff",
         },
       },
