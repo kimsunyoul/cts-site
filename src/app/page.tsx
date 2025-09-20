@@ -1,5 +1,3 @@
-import SiteHeader from "@/components/SiteHeader";
-
 function TechCard({
   title,
   tagline,
@@ -20,8 +18,7 @@ function TechCard({
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[#0b1220] text-white">
-      <SiteHeader />
+    <div className="min-h-screen bg-[#0b1220] text-white">
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="flex flex-col items-center gap-6">
           <div className="flex items-center gap-3">
@@ -64,6 +61,6 @@ export default function Page() {
           © {new Date().getFullYear()} CatastroTech Solutions™ — Engineering Safe Emotions for a Safer World.
         </div>
       </footer>
-    </main>
+    </div>
   );
 }
