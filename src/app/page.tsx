@@ -1,18 +1,68 @@
-function TechCard({
-  title,
-  tagline,
-  desc,
-}: {
-  title: string;
-  tagline: string;
-  desc: string;
-}) {
+import Link from "next/link";
+
+function CoreTechGrid() {
+  const TECH = [
+    {
+      key: "vsi",
+      href: "/vsi",
+      title: "VSI (Visual Shock Integration™)",
+      sub: "Reset. Optimize. Expand.",
+      desc: "시각 몰입 기반 감정 리셋 솔루션. 불필요한 감정을 빠르게 초기화하고 새로운 생산성을 부여합니다.",
+    },
+    {
+      key: "esd",
+      href: "/esd",
+      title: "ESD (Emotion Surveillance & Domination™)",
+      sub: "Know Your Mind, Control Your Future.",
+      desc: "실시간 감정 데이터 수집·분석·예측, 개인 맞춤형 안정성을 보장합니다.",
+    },
+    {
+      key: "szs",
+      href: "/szs",
+      title: "SZS (Safe Zone System™)",
+      sub: "Your Safe Space, Anytime, Anywhere.",
+      desc: "개인 맞춤형 Safe Zone 구축. 극한 상황에서도 완전한 보호와 휴식을 제공합니다.",
+    },
+    {
+      key: "scc",
+      href: "/scc",
+      title: "SCC (SafeCoin Contribution™)",
+      sub: "Giving that Grows.",
+      desc: "블록체인 기반 기부/후원으로 감정적 안정과 사회적 가치를 동시에 실현합니다.",
+    },
+    {
+      key: "smf",
+      href: "/smf",
+      title: "SMF (Safe Mindset Futures™)",
+      sub: "Hope is Service.",
+      desc: "데이터 기반 마인드 설계. 불안 대신 예측 가능한 안정을 제공합니다.",
+    },
+  ];
+
   return (
-    <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="text-[#57a6ff] font-medium">{tagline}</p>
-      <p className="text-sm text-white/70 mt-2">{desc}</p>
-    </div>
+    <section className="mx-auto max-w-screen-xl px-5">
+      <h2 className="text-center text-2xl font-semibold mb-6">CTS Core Technologies™</h2>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {TECH.map((t) => (
+          <Link
+            key={t.key}
+            href={t.href}
+            className="group block rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            <h3 className="text-lg font-semibold">{t.title}</h3>
+            <p className="mt-1 text-sm text-blue-300">{t.sub}</p>
+            <p className="mt-2 text-sm text-white/80">{t.desc}</p>
+
+            <span className="mt-4 inline-flex items-center gap-1 text-sm text-white/70 group-hover:text-white">
+              Enter
+              <svg viewBox="0 0 20 20" className="h-4 w-4">
+                <path d="M7 4l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" />
+              </svg>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -40,20 +90,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="tech" className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center">CTS Core Technologies™</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <TechCard title="VSI (Visual Shock Integration™)" tagline="Reset. Optimize. Expand."
-            desc="시각 몰입 기반 감정 리셋 솔루션. 불필요한 감정을 빠르게 초기화하고 새로운 생산성을 부여합니다." />
-          <TechCard title="ESD (Emotion Surveillance & Domination™)" tagline="Know Your Mind, Control Your Future."
-            desc="실시간 감정 데이터 수집·분석·예측. 개인 맞춤형 안정성을 보장합니다." />
-          <TechCard title="SZS (Safe Zone System™)" tagline="Your Safe Space, Anytime, Anywhere."
-            desc="개인 맞춤형 Safe Zone 구축. 극한 상황에서도 완전한 보호와 휴식을 제공합니다." />
-          <TechCard title="SCC (SafeCoin Contribution™)" tagline="Giving that Grows."
-            desc="블록체인 기반 기부/후원으로 감정적 안정과 사회적 가치를 동시에 실현합니다." />
-          <TechCard title="SMF (Safe Mindset Futures™)" tagline="Hope is Service."
-            desc="데이터 기반 미래 설계. 불안 대신 예측 가능한 안정을 제공합니다." />
-        </div>
+      <section id="tech" className="py-16">
+        <CoreTechGrid />
       </section>
 
       <footer className="border-t border-white/10 mt-16">
